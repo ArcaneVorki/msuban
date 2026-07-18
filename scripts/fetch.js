@@ -41,7 +41,7 @@ async function fetchBatch(addresses, attempt = 1) {
       console.error(
         `Batch failed (attempt ${attempt}/${MAX_RETRIES}): ${err.message}. Retrying...`
       );
-      await sleep(1000 * attempt);
+      await sleep(5000 * attempt);
       return fetchBatch(addresses, attempt + 1);
     }
     console.error(
