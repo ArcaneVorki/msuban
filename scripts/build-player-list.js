@@ -100,7 +100,7 @@ async function fetchCharacterDetails(entries) {
         classCode: entry.classCode,
         jobCode: entry.jobCode,
         guildName: entry.guildName,
-        imageUrl: entry.imageUrl || null,
+        imageUrl: c?.imageUrl || entry.imageUrl || null,
         walletAddr: c?.owner?.walletAddr || null,
         attackPower: c?.apStat?.attackPower || null,
       });

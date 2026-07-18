@@ -62,11 +62,11 @@
   .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
   .empty { color: var(--muted); padding: 24px; text-align: center; }
   canvas { max-height: 320px; }
-  .char-cell { display: flex; align-items: center; gap: 10px; }
+  .char-cell { display: flex; align-items: center; gap: 14px; }
   .char-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
     background: #0f1115;
     border: 1px solid var(--border);
     object-fit: cover;
@@ -77,7 +77,7 @@
     align-items: center;
     justify-content: center;
     color: var(--muted);
-    font-size: 10px;
+    font-size: 18px;
   }
   .char-name { font-weight: 600; font-size: 13px; }
   .char-extra { color: var(--muted); font-size: 11px; }
@@ -102,7 +102,11 @@
 
 <script>
 async function loadJSON(path) {
-  const res = await fetch(path);
+  // GitHub Pages fronts everything with a CDN cache, so a plain fetch can
+  // serve a stale copy for a while after a push. Bust both the CDN cache
+  // (query param) and the browser cache (no-store) on every load.
+  const bustedPath = `${path}?t=${Date.now()}`;
+  const res = await fetch(bustedPath, { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
   return res.json();
 }
@@ -255,7 +259,7 @@ async function main() {
         ? `
           <div class="char-cell">
             ${top.imageUrl
-              ? `<img class="char-avatar" src="${top.imageUrl}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;char-avatar placeholder&quot;>?</div>'" />`
+              ? `<img class="char-avatar" src="${top.imageUrl}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<div class=&quot;char-avatar placeholder&quot;>?</div>'" />`
               : `<div class="char-avatar placeholder">?</div>`
             }
             <div>
