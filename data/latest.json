@@ -1,0 +1,24 @@
+{
+  "date": "2026-07-18",
+  "checkedAt": "2026-07-18T09:50:02.541436Z",
+  "totalAddresses": 2,
+  "results": [
+    {
+      "address": "0x2841F98b8109aE34503929Ba937Af07e2D0aa47D",
+      "banInfo": {
+        "banned": true,
+        "isPermanentBan": false,
+        "banStartAt": "2026-07-10T09:50:02.541436Z",
+        "banEndAt": "2026-10-08T09:40:00Z"
+      },
+      "error": null
+    },
+    {
+      "address": "0xCfA397cCF402cAedbd595F7dA8C39E8e919820EA",
+      "banInfo": {
+        "banned": false
+      },
+      "error": null
+    }
+  ]
+}

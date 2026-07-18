@@ -1,0 +1,10 @@
+{
+  "name": "wallet-ban-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Daily wallet ban-check fetcher + dashboard",
+  "scripts": {
+    "check": "node scripts/fetch.js"
+  }
+}

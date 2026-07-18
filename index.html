@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Wallet Ban Tracker</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #262a33;
+    --text: #e6e8ec;
+    --muted: #9aa1ad;
+    --red: #ef4444;
+    --green: #22c55e;
+    --amber: #f59e0b;
+    --accent: #6366f1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    margin: 0;
+    padding: 24px;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .card .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .card .value.red { color: var(--red); }
+  .card .value.green { color: var(--green); }
+  .card .value.amber { color: var(--amber); }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  .panel h2 { font-size: 14px; margin: 0 0 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; }
+  tr:hover td { background: #1d212b; }
+  .pill { padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+  .pill.banned { background: rgba(239,68,68,0.15); color: var(--red); }
+  .pill.perm { background: rgba(239,68,68,0.25); color: var(--red); }
+  .pill.ok { background: rgba(34,197,94,0.15); color: var(--green); }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+  .empty { color: var(--muted); padding: 24px; text-align: center; }
+  canvas { max-height: 320px; }
+</style>
+</head>
+<body>
+
+<h1>Wallet Ban Tracker</h1>
+<div class="subtitle" id="subtitle">Loading data…</div>
+
+<div class="cards" id="cards"></div>
+
+<div class="panel">
+  <h2>Banned addresses over time</h2>
+  <canvas id="historyChart"></canvas>
+</div>
+
+<div class="panel">
+  <h2>Currently banned addresses</h2>
+  <div id="bannedTableWrap"></div>
+</div>
+
+<script>
+async function loadJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+  return res.json();
+}
+
+function fmtDate(iso) {
+  if (!iso) return "—";
+  return new Date(iso).toLocaleString();
+}
+
+function daysUntil(iso) {
+  if (!iso) return null;
+  const diff = new Date(iso).getTime() - Date.now();
+  return Math.ceil(diff / (1000 * 60 * 60 * 24));
+}
+
+async function main() {
+  let manifest, latest;
+  try {
+    manifest = await loadJSON("data/manifest.json");
+    latest = await loadJSON("data/latest.json");
+  } catch (err) {
+    document.getElementById("cards").innerHTML =
+      `<div class="empty">No data yet. Once the daily GitHub Action runs at least once, results will show up here.</div>`;
+    document.getElementById("subtitle").textContent = "Waiting for first run…";
+    return;
+  }
+
+  document.getElementById("subtitle").textContent =
+    `Last checked: ${fmtDate(latest.checkedAt)} · ${latest.totalAddresses} addresses tracked`;
+
+  // --- Summary cards ---
+  const results = latest.results || [];
+  const banned = results.filter(r => r.banInfo?.banned);
+  const permanent = banned.filter(r => r.banInfo?.isPermanentBan);
+  const temporary = banned.filter(r => r.banInfo && !r.banInfo.isPermanentBan);
+  const errors = results.filter(r => r.error);
+
+  const cards = [
+    { label: "Total addresses", value: results.length, cls: "" },
+    { label: "Currently banned", value: banned.length, cls: "red" },
+    { label: "Permanent bans", value: permanent.length, cls: "red" },
+    { label: "Temporary bans", value: temporary.length, cls: "amber" },
+    { label: "Clean", value: results.length - banned.length, cls: "green" },
+    { label: "Errors", value: errors.length, cls: errors.length ? "amber" : "" },
+  ];
+  document.getElementById("cards").innerHTML = cards.map(c => `
+    <div class="card">
+      <div class="label">${c.label}</div>
+      <div class="value ${c.cls}">${c.value}</div>
+    </div>
+  `).join("");
+
+  // --- History chart (loads each day in the manifest) ---
+  const historyDates = manifest.slice(-90); // cap at last 90 days for perf
+  const historyRecords = await Promise.all(
+    historyDates.map(d => loadJSON(`data/history/${d}.json`).catch(() => null))
+  );
+
+  const labels = [];
+  const bannedCounts = [];
+  const permCounts = [];
+  historyRecords.forEach((rec, i) => {
+    if (!rec) return;
+    labels.push(historyDates[i]);
+    const b = rec.results.filter(r => r.banInfo?.banned);
+    bannedCounts.push(b.length);
+    permCounts.push(b.filter(r => r.banInfo?.isPermanentBan).length);
+  });
+
+  new Chart(document.getElementById("historyChart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Total banned",
+          data: bannedCounts,
+          borderColor: "#ef4444",
+          backgroundColor: "rgba(239,68,68,0.1)",
+          tension: 0.25,
+          fill: true,
+        },
+        {
+          label: "Permanent bans",
+          data: permCounts,
+          borderColor: "#f59e0b",
+          backgroundColor: "rgba(245,158,11,0.08)",
+          tension: 0.25,
+          fill: true,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { color: "#e6e8ec" } } },
+      scales: {
+        x: { ticks: { color: "#9aa1ad" }, grid: { color: "#262a33" } },
+        y: { ticks: { color: "#9aa1ad" }, grid: { color: "#262a33" }, beginAtZero: true },
+      },
+    },
+  });
+
+  // --- Banned addresses table ---
+  if (banned.length === 0) {
+    document.getElementById("bannedTableWrap").innerHTML =
+      `<div class="empty">No banned addresses right now.</div>`;
+  } else {
+    const rows = banned.map(r => {
+      const dLeft = daysUntil(r.banInfo.banEndAt);
+      return `
+        <tr>
+          <td class="mono">${r.address}</td>
+          <td><span class="pill ${r.banInfo.isPermanentBan ? "perm" : "banned"}">
+            ${r.banInfo.isPermanentBan ? "Permanent" : "Temporary"}
+          </span></td>
+          <td>${fmtDate(r.banInfo.banStartAt)}</td>
+          <td>${r.banInfo.isPermanentBan ? "—" : fmtDate(r.banInfo.banEndAt)}</td>
+          <td>${r.banInfo.isPermanentBan ? "—" : (dLeft !== null ? `${dLeft}d` : "—")}</td>
+        </tr>
+      `;
+    }).join("");
+
+    document.getElementById("bannedTableWrap").innerHTML = `
+      <table>
+        <thead>
+          <tr><th>Address</th><th>Type</th><th>Banned since</th><th>Ends</th><th>Days left</th></tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+}
+
+main();
+</script>
+</body>
+</html>
