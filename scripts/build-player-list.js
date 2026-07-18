@@ -10,8 +10,10 @@
 //   PAGE_SIZE     - ranking page size (default 10 — matches the tested endpoint;
 //                   bump this if you confirm the API accepts a larger page size,
 //                   it'll cut the number of ranking requests way down)
-//   CONCURRENCY   - parallel in-flight requests (default 5)
-//   DELAY_MS      - delay per request slot, ms (default 150)
+//   CONCURRENCY   - parallel in-flight requests (default 1, so DELAY_MS is a true
+//                   gap between every single API call — raise this if you want
+//                   parallel lanes instead, but then DELAY_MS only paces each lane)
+//   DELAY_MS      - delay per request slot, ms (default 1000 = 1 second)
 
 import fs from "fs";
 import path from "path";
@@ -22,8 +24,8 @@ const CHARACTER_API = "https://msu.io/navigator/api/navigator/characters";
 const TOTAL_PLAYERS = parseInt(process.env.TOTAL_PLAYERS || "5000", 10);
 const PAGE_SIZE = parseInt(process.env.PAGE_SIZE || "10", 10);
 const TOTAL_PAGES = Math.ceil(TOTAL_PLAYERS / PAGE_SIZE);
-const CONCURRENCY = parseInt(process.env.CONCURRENCY || "5", 10);
-const DELAY_MS = parseInt(process.env.DELAY_MS || "150", 10);
+const CONCURRENCY = parseInt(process.env.CONCURRENCY || "1", 10);
+const DELAY_MS = parseInt(process.env.DELAY_MS || "1000", 10);
 const MAX_RETRIES = 3;
 
 function sleep(ms) {

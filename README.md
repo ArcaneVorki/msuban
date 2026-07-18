@@ -66,10 +66,12 @@ Run it manually from the **Actions** tab → "Build Player & Wallet List" → "R
 run weekly on Sundays — rankings don't shift enough to justify pulling them daily. Comment
 out or remove the `schedule:` block in that workflow if you'd rather trigger it by hand only.
 
-This does ~500 ranking requests plus one request per character (up to 5000), run 5-at-a-time
-with a small delay between each. Expect it to take a while the first time — check the Actions
-log for progress. If you see failures piling up, lower `CONCURRENCY` or raise `DELAY_MS` as
-env vars in the workflow file.
+This does ~500 ranking requests plus one request per character (up to 5000) — around 5500
+requests total. Calls run **one at a time with a 1-second delay between each** by default
+(`CONCURRENCY=1`, `DELAY_MS=1000`), to stay polite to the API. That means a full run takes
+roughly **90 minutes**. If you want it faster and are confident the API can handle it, raise
+`CONCURRENCY` in the workflow file (note: with concurrency > 1, `DELAY_MS` only paces each
+parallel lane, so calls will overlap rather than being strictly 1 second apart overall).
 
 Note this **overwrites** `data/addresses.json` each time it runs — it always reflects the
 current top-N leaderboard, not an accumulated list. If you want to track wallets you've

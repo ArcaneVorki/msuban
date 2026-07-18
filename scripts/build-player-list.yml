@@ -1,0 +1,41 @@
+name: Build Player & Wallet List
+
+on:
+  workflow_dispatch:
+    inputs:
+      total_players:
+        description: "How many top players to pull"
+        required: false
+        default: "5000"
+  schedule:
+    # Weekly refresh — rankings don't need to be re-pulled daily.
+    # Adjust or remove this if you'd rather trigger it manually only.
+    - cron: "0 6 * * 0" # Sundays at 06:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build player + wallet list
+        env:
+          TOTAL_PLAYERS: ${{ github.event.inputs.total_players || '5000' }}
+        run: node scripts/build-player-list.js
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/players.json data/addresses.json
+          git diff --staged --quiet || git commit -m "Refresh player/wallet list: $(date -u +%Y-%m-%d)"
+          git push
