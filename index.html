@@ -153,38 +153,44 @@ async function main() {
     permCounts.push(b.filter(r => r.banInfo?.isPermanentBan).length);
   });
 
-  new Chart(document.getElementById("historyChart"), {
-    type: "line",
-    data: {
-      labels,
-      datasets: [
-        {
-          label: "Total banned",
-          data: bannedCounts,
-          borderColor: "#ef4444",
-          backgroundColor: "rgba(239,68,68,0.1)",
-          tension: 0.25,
-          fill: true,
-        },
-        {
-          label: "Permanent bans",
-          data: permCounts,
-          borderColor: "#f59e0b",
-          backgroundColor: "rgba(245,158,11,0.08)",
-          tension: 0.25,
-          fill: true,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { labels: { color: "#e6e8ec" } } },
-      scales: {
-        x: { ticks: { color: "#9aa1ad" }, grid: { color: "#262a33" } },
-        y: { ticks: { color: "#9aa1ad" }, grid: { color: "#262a33" }, beginAtZero: true },
+  try {
+    new Chart(document.getElementById("historyChart"), {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: "Total banned",
+            data: bannedCounts,
+            borderColor: "#ef4444",
+            backgroundColor: "rgba(239,68,68,0.1)",
+            tension: 0.25,
+            fill: true,
+          },
+          {
+            label: "Permanent bans",
+            data: permCounts,
+            borderColor: "#f59e0b",
+            backgroundColor: "rgba(245,158,11,0.08)",
+            tension: 0.25,
+            fill: true,
+          },
+        ],
       },
-    },
-  });
+      options: {
+        responsive: true,
+        plugins: { legend: { labels: { color: "#e6e8ec" } } },
+        scales: {
+          x: { ticks: { color: "#9aa1ad" }, grid: { color: "#262a33" } },
+          y: { ticks: { color: "#9aa1ad" }, grid: { color: "#262a33" }, beginAtZero: true },
+        },
+      },
+    });
+  } catch (err) {
+    console.error("Chart rendering failed:", err);
+    document.getElementById("historyChart").outerHTML =
+      `<div class="empty">Chart failed to render: ${err.message}</div>`;
+  }
 
   // --- Banned addresses table ---
   if (banned.length === 0) {
