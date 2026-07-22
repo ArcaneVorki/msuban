@@ -7,7 +7,7 @@ import path from "path";
 
 const API_URL = "https://api.msu123.com/api/wallet-analysis/ban-check";
 const BATCH_SIZE = 50;
-const DELAY_BETWEEN_BATCHES_MS = 10000; // be polite to their API
+const DELAY_BETWEEN_BATCHES_MS = 60000; // be polite to their API
 const MAX_RETRIES = 3;
 
 function sleep(ms) {

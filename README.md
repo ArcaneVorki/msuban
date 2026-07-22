@@ -80,8 +80,8 @@ manually added on top of the leaderboard, keep those in a separate file rather t
 
 ## Scaling to 5000 addresses
 
-At 5000 addresses ÷ 50 per batch = 100 requests/day, spaced 10 seconds apart by default —
-that's roughly 17 minutes of runtime, well within Actions' free minutes for a public repo
+At 5000 addresses ÷ 50 per batch = 100 requests/day, spaced 1 minute apart by default —
+that's roughly 100 minutes of runtime, well within Actions' free minutes for a public repo
 (2000 min/month on private repos too, which this barely touches).
 
 If the API starts rate-limiting you, increase `DELAY_BETWEEN_BATCHES_MS` in `scripts/fetch.js`.
