@@ -3,7 +3,7 @@ name: Daily Wallet Ban Check
 on:
   schedule:
     # Runs at 13:00 UTC every day — adjust to whatever time works for you
-    - cron: "0 13 * * *"
+    - cron: "7 13 * * *"
   workflow_dispatch: {} # lets you trigger it manually from the Actions tab
 
 permissions:
