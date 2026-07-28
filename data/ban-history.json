@@ -2061,15 +2061,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xdEC125303e185038e5c8131003730f6d3D882c76": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-12T15:40:02.457953Z",
-        "banEndAt": "2026-07-27T15:31:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-12T15:40:02.457953Z",
         "banEndAt": "2026-07-27T15:31:00Z",
@@ -4480,15 +4474,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x90539047BC1102cF3e88719FC2087F1095b4BdEE": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-06T03:20:02.678339Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-06T03:20:02.678339Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -4944,15 +4932,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x5F9275aEd1F81C932daD56FAbDFf17b688F22Fa1": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-14T10:00:03.641800Z",
-        "banEndAt": "2026-07-29T09:59:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-14T10:00:03.641800Z",
         "banEndAt": "2026-07-29T09:59:00Z",
@@ -5239,15 +5221,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xA470FCefb1BFe0732713f6aEDd081eB257eDACbA": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-15T16:50:02.355349Z",
-        "banEndAt": "2026-08-14T16:41:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-15T16:50:02.355349Z",
         "banEndAt": "2026-08-14T16:41:00Z",
@@ -6795,15 +6771,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xf2Bb0962f73618737017A2134697fE519749Aec0": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-08T07:00:03.309805Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-08T07:00:03.309805Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -7157,15 +7127,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x597F7F1338469037F49390ccdc25570cC9cd7475": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-12T06:20:02.757805Z",
-        "banEndAt": "2026-08-11T06:18:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-12T06:20:02.757805Z",
         "banEndAt": "2026-08-11T06:18:00Z",
@@ -7393,15 +7357,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x7AABAF594B60D2985845Cf3661a14b3b7685Cf4b": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-14T10:00:03.601629Z",
-        "banEndAt": "2026-07-29T09:55:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-14T10:00:03.601629Z",
         "banEndAt": "2026-07-29T09:55:00Z",
@@ -7496,15 +7454,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xFc2E0F26f8cA78532c5E3DAb7cc1603D90FE7b0d": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-04-28T12:40:05.804602Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-04-28T12:40:05.804602Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -7581,15 +7533,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x2CF688F3fc1e605ACEee2e81C221FE7cf6fB7201": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-04-22T02:50:02.796325Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-04-22T02:50:02.796325Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -8166,15 +8112,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xd8922605f14c0461ECD8F116ee142655382813c4": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-05-16T06:40:04.048348Z",
-        "banEndAt": "2026-08-14T06:38:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-05-16T06:40:04.048348Z",
         "banEndAt": "2026-08-14T06:38:00Z",
@@ -9470,15 +9410,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xd1E676BC78aA8427E8AE3D910B962C23cb0a2dBB": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-06-01T02:27:14.168932Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-06-01T02:27:14.168932Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -10503,15 +10437,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x2451B9338dCf87e63c529D1D3596aF85dc683426": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-06T03:30:02.765419Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-06T03:30:02.765419Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -10750,15 +10678,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xC7DF668490C405E72d8be354B8e073Dc90830B04": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-18T03:20:02.432702Z",
-        "banEndAt": "2026-10-16T03:20:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-18T03:20:02.432702Z",
         "banEndAt": "2026-10-16T03:20:00Z",
@@ -11069,15 +10991,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xBddca825fc847182FB616877e59dEB6D37d3A666": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-17T20:40:02.641364Z",
-        "banEndAt": "2026-08-01T20:32:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-17T20:40:02.641364Z",
         "banEndAt": "2026-08-01T20:32:00Z",
@@ -11497,15 +11413,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x2a2D4C47d1BEC8beE42E20C9C8478457756e3548": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-05-19T02:10:02.463515Z",
-        "banEndAt": "2027-05-14T02:07:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-05-19T02:10:02.463515Z",
         "banEndAt": "2027-05-14T02:07:00Z",
@@ -11828,15 +11738,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x38B8eB0b1284FbC6456A8eC5a3769285E453Ca1A": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-04-23T09:10:03.015749Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-04-23T09:10:03.015749Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -14903,15 +14807,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x2d11328753d3D24b25a1d33ce3a912675a1DA189": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-16T10:50:02.522935Z",
-        "banEndAt": "2026-07-31T10:45:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-16T10:50:02.522935Z",
         "banEndAt": "2026-07-31T10:45:00Z",
@@ -16038,15 +15936,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x00Ad9BADD77Cae1C41455039565939e5FF23492C": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-05-18T01:48:17.110257Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-05-18T01:48:17.110257Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -16093,15 +15985,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x5e2e12E0f05FdE0374b067be9973F8474A77a53b": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-03-23T19:00:06.999200Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-03-23T19:00:06.999200Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -16394,15 +16280,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xb130F309092A21F76097A4C6Dd370be6F6870e8d": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-17T04:53:29.219238Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-17T04:53:29.219238Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -17814,15 +17694,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xF6D5214FA0D97d6B5c9A7A07f21C6730919a6046": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-06T02:50:02.569218Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-06T02:50:02.569218Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -19959,15 +19833,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x5c053C4c0F3737A0bFd266a35D62eE5Ea33c0F0E": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-11T17:50:02.528207Z",
-        "banEndAt": "2026-08-10T17:42:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-11T17:50:02.528207Z",
         "banEndAt": "2026-08-10T17:42:00Z",
@@ -20369,15 +20237,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xb6E4ac54EeEA04531A16B530Ebbc3B83c127bCaE": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-04-23T09:40:05.016754Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-04-23T09:40:05.016754Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -20761,15 +20623,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xA6105D4F9c18f43B6b00523957Ef9767C39728b2": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-08T16:00:03.425066Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-08T16:00:03.425066Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -20918,15 +20774,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x83a59c197EBa44a2B6cdcD6691A04ad7b6d5e507": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-07-20T02:50:16.161872Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-07-20T02:50:16.161872Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -21527,15 +21377,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x4c3d58c254F5aeEb676E38Fe1F235aECe4C3353F": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-04-23T09:50:02.920975Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-04-23T09:50:02.920975Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -22746,15 +22590,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x47410e826024C1226022b6A4bF19E3ed00344A7f": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-04-23T09:00:09.218225Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-04-23T09:00:09.218225Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -22826,15 +22664,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xf6A90336D2ba7B3d259B9ab4E031b53483C7789E": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-04-23T09:20:06.013974Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-04-23T09:20:06.013974Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -23859,15 +23691,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x33DcCfd14b29F01021b24dac54672028C4A2d259": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-02-07T19:20:04.150869Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-02-07T19:20:04.150869Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -24034,15 +23860,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0x13c5658bcf73D83DdDA27756cafd48AEf428232C": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-06-27T20:20:05.562489Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-06-27T20:20:05.562489Z",
         "banEndAt": "9999-01-01T00:00:00Z",
@@ -24906,15 +24726,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xF7F6aB523759371605E916C6AbbAD150Ea2fee57": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-06-30T05:50:02.672673Z",
-        "banEndAt": "2026-07-30T05:48:00Z",
-        "isPermanentBan": false,
-        "closed": true
-      },
       {
         "banStartAt": "2026-06-30T05:50:02.672673Z",
         "banEndAt": "2026-07-30T05:48:00Z",
@@ -25807,15 +25621,9 @@
     "lastCheckedAt": "2026-07-28T16:36:38.479897+00:00"
   },
   "0xa9498512BE8Eac898AdAB2ee909887EB2904024F": {
-    "timesBanned": 2,
+    "timesBanned": 1,
     "currentlyBanned": true,
     "periods": [
-      {
-        "banStartAt": "2026-05-08T15:40:04.162523Z",
-        "banEndAt": "9999-01-01T00:00:00Z",
-        "isPermanentBan": true,
-        "closed": true
-      },
       {
         "banStartAt": "2026-05-08T15:40:04.162523Z",
         "banEndAt": "9999-01-01T00:00:00Z",
