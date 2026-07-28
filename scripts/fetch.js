@@ -82,12 +82,14 @@ function updateBanHistory(results, checkedAt) {
 
     if (isBanned) {
       const lastPeriod = entry.periods[entry.periods.length - 1];
-      // A "new" ban period is one we haven't already recorded — either there's
-      // no prior period, the prior one was closed out (address was clean in
-      // between), or the API's own banStartAt doesn't match what we have.
+      // A "new" ban period is only one where the API's own banStartAt
+      // doesn't match what we already have. A prior period being closed
+      // (address read as clean in between) does NOT by itself make this a
+      // new period — if banStartAt is unchanged, it's the same ban
+      // continuing (e.g. a transient unbanned reading), and we reopen the
+      // existing period instead of double-counting it as a repeat offense.
       const isNewPeriod =
         !lastPeriod ||
-        lastPeriod.closed === true ||
         lastPeriod.banStartAt !== (r.banInfo.banStartAt || null);
 
       if (isNewPeriod) {
@@ -102,6 +104,7 @@ function updateBanHistory(results, checkedAt) {
         // Same ongoing ban — just refresh in case end date or permanence changed
         lastPeriod.banEndAt = r.banInfo.banEndAt || lastPeriod.banEndAt;
         lastPeriod.isPermanentBan = !!r.banInfo.isPermanentBan;
+        lastPeriod.closed = false;
       }
       entry.currentlyBanned = true;
     } else {
