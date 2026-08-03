@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-28",
-  "checkedAt": "2026-07-28T16:36:38.479897+00:00",
+  "date": "2026-08-03",
+  "checkedAt": "2026-08-03T11:34:51.956876+00:00",
   "totalAddresses": 4339,
   "totalInList": 4339,
   "results": [
@@ -2039,7 +2039,10 @@
     {
       "address": "0xcbf7BbbD3c9b4Ea8AC875221446Cf794D50F907b",
       "banInfo": {
-        "banned": false
+        "banned": true,
+        "isPermanentBan": false,
+        "banStartAt": "2026-07-26T17:30:02.754473Z",
+        "banEndAt": "2026-08-25T17:21:00Z"
       },
       "error": null
     },
@@ -2480,10 +2483,7 @@
     {
       "address": "0xdEC125303e185038e5c8131003730f6d3D882c76",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-12T15:40:02.457953Z",
-        "banEndAt": "2026-07-27T15:31:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -3603,7 +3603,10 @@
     {
       "address": "0xB373da395bb8f948e98B948445292B87e036FeF6",
       "banInfo": {
-        "banned": false
+        "banned": true,
+        "isPermanentBan": true,
+        "banStartAt": "2026-07-26T16:50:02.528116Z",
+        "banEndAt": "9999-01-01T00:00:00Z"
       },
       "error": null
     },
@@ -4065,7 +4068,10 @@
     {
       "address": "0x138Bb34ef7dD5550b1dDE308c2cA460ed25a8D7D",
       "banInfo": {
-        "banned": false
+        "banned": true,
+        "isPermanentBan": false,
+        "banStartAt": "2026-07-31T04:10:02.728016Z",
+        "banEndAt": "2026-08-15T04:07:00Z"
       },
       "error": null
     },
@@ -5419,7 +5425,10 @@
     {
       "address": "0x1099873309f6FfF232CA10AddDd194104fE4A8E0",
       "banInfo": {
-        "banned": false
+        "banned": true,
+        "isPermanentBan": false,
+        "banStartAt": "2026-07-29T13:10:02.648972Z",
+        "banEndAt": "2026-10-27T13:04:00Z"
       },
       "error": null
     },
@@ -5825,10 +5834,7 @@
     {
       "address": "0x5F9275aEd1F81C932daD56FAbDFf17b688F22Fa1",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-14T10:00:03.641800Z",
-        "banEndAt": "2026-07-29T09:59:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -8050,10 +8056,7 @@
     {
       "address": "0x5033f076d3E2529E6882a53ceE56dA401f9AD48d",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-26T04:37:51.119869597Z",
-        "banEndAt": "2026-07-29T03:53:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -8717,10 +8720,7 @@
     {
       "address": "0x7AABAF594B60D2985845Cf3661a14b3b7685Cf4b",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-14T10:00:03.601629Z",
-        "banEndAt": "2026-07-29T09:55:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -9279,10 +9279,7 @@
     {
       "address": "0x4DeB4e501Fb7Bef8671D7E64527810F4c7A02A1f",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-26T15:10:26.220700913Z",
-        "banEndAt": "2026-07-26T19:55:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -12920,10 +12917,7 @@
     {
       "address": "0xBddca825fc847182FB616877e59dEB6D37d3A666",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-17T20:40:02.641364Z",
-        "banEndAt": "2026-08-01T20:32:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -16555,10 +16549,7 @@
     {
       "address": "0x3a305B0E59C408624Db7D573A6FEbF4ce446978B",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": true,
-        "banStartAt": "2026-07-27T09:02:35.980645Z",
-        "banEndAt": "9999-01-01T00:00:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -17412,10 +17403,7 @@
     {
       "address": "0x2d11328753d3D24b25a1d33ce3a912675a1DA189",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-16T10:50:02.522935Z",
-        "banEndAt": "2026-07-31T10:45:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -18870,10 +18858,7 @@
     {
       "address": "0xc92408f267996F776C89e2dfA494210e469AC376",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-27T16:35:49.959836499Z",
-        "banEndAt": "2026-07-27T16:53:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -19076,10 +19061,7 @@
     {
       "address": "0xb130F309092A21F76097A4C6Dd370be6F6870e8d",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": true,
-        "banStartAt": "2026-07-17T04:53:29.219238Z",
-        "banEndAt": "9999-01-01T00:00:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -23109,7 +23091,10 @@
     {
       "address": "0xD3cf554A500cC350d8d297BBB237C80aB33ecB5B",
       "banInfo": {
-        "banned": false
+        "banned": true,
+        "isPermanentBan": true,
+        "banStartAt": "2026-08-02T19:58:58.986746Z",
+        "banEndAt": "9999-01-01T00:00:00Z"
       },
       "error": null
     },
@@ -24535,10 +24520,7 @@
     {
       "address": "0x949DCF5cc652c87dc12Fa8e091174f239dC4cA8b",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-07-23T09:00:04.299158Z",
-        "banEndAt": "2026-07-30T08:53:00Z"
+        "banned": false
       },
       "error": null
     },
@@ -25283,7 +25265,10 @@
     {
       "address": "0x4d99D6e13f2DA43786eD2e5Dd97Bd8300e65F139",
       "banInfo": {
-        "banned": false
+        "banned": true,
+        "isPermanentBan": false,
+        "banStartAt": "2026-08-02T07:00:03.769008Z",
+        "banEndAt": "2026-08-17T06:52:00Z"
       },
       "error": null
     },
@@ -28781,10 +28766,7 @@
     {
       "address": "0xF7F6aB523759371605E916C6AbbAD150Ea2fee57",
       "banInfo": {
-        "banned": true,
-        "isPermanentBan": false,
-        "banStartAt": "2026-06-30T05:50:02.672673Z",
-        "banEndAt": "2026-07-30T05:48:00Z"
+        "banned": false
       },
       "error": null
     },
